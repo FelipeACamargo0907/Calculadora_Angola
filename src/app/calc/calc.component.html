@@ -1,19 +1,24 @@
- <!DOCTYPE html>
- <html lang="en">
- <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculadora</title>
- </head>
- <body>
-    <div class="container">
-        <div class="col-4">
+<br>
+<div class="container">
     <div class="input-group mb-3">
-        <span class="input-group-text" id="inputGroup-sizing-default">Default</span>
-        <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+        <span class="input-group-text" id="addon-wrapping">Valor 1:</span>
+        <input type="number" class="form-control" aria-label="Sizing example input"
+            aria-describedby="inputGroup-sizing-default" [(ngModel)]="val1">
+    </div>
+    <div class="input-group mb-3">
+        <span class="input-group-text" id="addon-wrapping">Valor 2:</span>
+        <input type="number" class="form-control" aria-label="Sizing example input"
+            aria-describedby="inputGroup-sizing-default" [(ngModel)]="val2">
+    </div>
+    <div class="btn-group" role="group" aria-label="Basic outlined example">
+        <button type="button" class="btn btn-outline-primary" (click)="Calcular('+')">+</button>
+        <button type="button" class="btn btn-outline-success" (click)="Calcular('-')">-</button>
+        <button type="button" class="btn btn-outline-warning" (click)="Calcular('*')">*</button>
+        <button type="button" class="btn btn-outline-danger" (click)="Calcular('/')">/</button>
+    </div><br><br>
+    <div class="input-group mb-3">
+        <span class="input-group-text" id="addon-wrapping">=</span>
+        <input type="text" class="form-control" aria-label="Sizing example input"
+            aria-describedby="inputGroup-sizing-default" disabled [(ngModel)]="resultado">
     </div>
 </div>
-</div>
- </body>
- </html>
